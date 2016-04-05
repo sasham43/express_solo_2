@@ -9,8 +9,10 @@ $(function(){
     }).done(function(response){
       var responseData = response;
       console.log(responseData);
-      var htmlOutput = '<p>' + responseData.string + '</p><p>' + responseData.money + '</p>';
+      var htmlOutput = '<div class=\"accountDisplay\"><p>' + responseData.string + '</p><p>' + responseData.money + '</p></div>';
       $(".container").append(htmlOutput);
+      $(".accountDisplay").hide();
+      $(".accountDisplay").show(400).removeClass("accountDisplay");
     });
   })
 })
